@@ -1,8 +1,8 @@
 #ifndef ORDEMDEPRODUCAO_H
 #define ORDEMDEPRODUCAO_H
 
-#include "Produto.hpp"
-#include "Data.hpp"
+#include "../includes/Produto.hpp"
+#include "../includes/Data.hpp"
 
 enum Status {
   Pendente,
@@ -11,7 +11,6 @@ enum Status {
 };
 
 class OrdemDeProducao {
-  private:
     Produto* produto;
     Data data;
     int quantidade;

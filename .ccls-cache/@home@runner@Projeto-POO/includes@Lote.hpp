@@ -10,7 +10,7 @@ class Lote {
     Data data;
     int quantidade;
     const int NUMLOTE;
-    static int lotesTotais = 0;
+    static int lotesTotais;
   public:
     Lote(Produto*, Data, int);
     Lote();

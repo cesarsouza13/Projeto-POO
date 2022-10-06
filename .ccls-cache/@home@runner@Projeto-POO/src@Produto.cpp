@@ -3,6 +3,8 @@
 
 // Contrutores e Destrutores
 
+Produto::~Produto(){}
+
 Produto::Produto(std::string produto, int codigo, float valor, Categoria categoria, int loteMinimo, int estoqueMinimo){
   this->produto = produto;
   this->codigo = codigo;
@@ -15,7 +17,7 @@ Produto::Produto(std::string produto, int codigo, float valor, Categoria categor
 
 Produto::Produto(){}
 
-~Produto::Produto(){}
+
 
 // Getters
 
@@ -45,7 +47,7 @@ int Produto::getLoteMinimo(){
 
 int Produto::getEstoqueMinimo(){ return this-> estoqueMinimo;}
 
-Lote Produto::getLote(int numLote){
+Lote* Produto::getLote(int numLote){
   bool flag = 1;
   for(unsigned int num = this->lotes.size();flag;num--){
     if(this->lotes[num]->getNumLote() == numLote){

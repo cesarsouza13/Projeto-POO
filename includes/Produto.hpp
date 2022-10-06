@@ -1,8 +1,8 @@
 #ifndef PRODUTO_H
 #define PRODUTO_H
 
-#include "../includes/Categoria.hpp"
-#include "../includes/Lote.hpp"
+#include "Categoria.hpp"
+#include "Lote.hpp"
 #include <string>
 
 class Produto {
@@ -22,24 +22,24 @@ public:
     ~Produto();
 
     // Getters
-    std::string Produto::getProduto();
-    int Produto::getCodigo();
-    float Produto::getValor();
-    Categoria Produto::getCategoria();
-    int Produto::getLoteMinimo();
-    int Produto::getEstoqueMinimo();
-    Lote Produto::getLote(int numLote);
-    vector <Lote*> Produto::getLoteTodos();
+    std::string getProduto();
+    int getCodigo();
+    float getValor();
+    Categoria getCategoria();
+    int getLoteMinimo();
+    int getEstoqueMinimo();
+    Lote* getLote(int numLote);
+    vector <Lote*> getLoteTodos();
 
     // Setters
-    void Produto::setProduto(std::string produto);
-    void Produto::setCodigo(int codigo);
-    void Produto::setValor(float valor);
-    void Produto::setCategoria(Categoria categoria);
-    void Produto::setLoteMinimo(int loteMinimo);
-    void Produto::setEstoqueMinimo(int estoqueMinimo);
-    void Produto::setLote(int numLote, Lote lote);
-    void Produto::setLoteTodos(vector <Lote*> lotes)
+    void setProduto(std::string produto);
+    void setCodigo(int codigo);
+    void setValor(float valor);
+    void setCategoria(Categoria categoria);
+    void setLoteMinimo(int loteMinimo);
+    void setEstoqueMinimo(int estoqueMinimo);
+    void setLote(int numLote, Lote lote);
+    void setLoteTodos(vector <Lote*> lotes);
 };
 
 
